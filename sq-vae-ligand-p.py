@@ -66,7 +66,7 @@ model_spec_path = os.path.join(model_save_path, model_spec_name)
 model_rslt_path = os.path.join(model_save_path, model_rslt_name)
 
 n_qubits = int(math.log(n_single_features, 2))
-qml.enable_tape()
+# qml.enable_tape()
 dev = qml.device("default.qubit.tf", wires=n_qubits)
 @qml.qnode(dev, interface='tf', diff_method='backprop')
 def qnode_e(inputs, weights):
